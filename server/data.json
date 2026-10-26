@@ -1,0 +1,167 @@
+{
+  "seq": 100,
+  "applications": [
+    {
+      "id": 1,
+      "company": "字节跳动",
+      "position": "前端开发工程师",
+      "status": "已投递",
+      "salary": "25-40K·15薪",
+      "source": "内推",
+      "appliedDate": "2026-10-18",
+      "notes": "学长内推，简历已过筛，等 HR 约聊",
+      "createdAt": "2026-10-10T09:00:00.000Z",
+      "updatedAt": "2026-10-20T12:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "company": "腾讯",
+      "position": "后端开发工程师（Go）",
+      "status": "面试中",
+      "salary": "28-45K·16薪",
+      "source": "官网",
+      "appliedDate": "2026-10-12",
+      "notes": "一面已过，二面时间已约",
+      "createdAt": "2026-10-11T09:00:00.000Z",
+      "updatedAt": "2026-10-21T12:00:00.000Z"
+    },
+    {
+      "id": 3,
+      "company": "阿里巴巴",
+      "position": "全栈开发工程师",
+      "status": "待投递",
+      "salary": "30-50K·16薪",
+      "source": "官网",
+      "appliedDate": null,
+      "notes": "需要先补一份针对 P6 的简历",
+      "createdAt": "2026-10-12T09:00:00.000Z",
+      "updatedAt": "2026-10-22T12:00:00.000Z"
+    },
+    {
+      "id": 4,
+      "company": "美团",
+      "position": "Java 后端开发",
+      "status": "已拒绝",
+      "salary": "24-38K·15.5薪",
+      "source": "BOSS直聘",
+      "appliedDate": "2026-09-28",
+      "notes": "二面聊得一般，已发感谢信",
+      "createdAt": "2026-10-13T09:00:00.000Z",
+      "updatedAt": "2026-10-23T12:00:00.000Z"
+    },
+    {
+      "id": 5,
+      "company": "网易",
+      "position": "游戏客户端开发（Unity）",
+      "status": "已投递",
+      "salary": "22-35K·14薪",
+      "source": "拉勾",
+      "appliedDate": "2026-10-20",
+      "notes": "笔试已完成，难度中等",
+      "createdAt": "2026-10-14T09:00:00.000Z",
+      "updatedAt": "2026-10-24T12:00:00.000Z"
+    },
+    {
+      "id": 6,
+      "company": "百度",
+      "position": "搜索算法工程师",
+      "status": "面试中",
+      "salary": "30-55K·14.5薪",
+      "source": "猎聘",
+      "appliedDate": "2026-10-10",
+      "notes": "一面聊了召回策略，感觉不错",
+      "createdAt": "2026-10-15T09:00:00.000Z",
+      "updatedAt": "2026-10-20T12:00:00.000Z"
+    },
+    {
+      "id": 7,
+      "company": "京东",
+      "position": "数据分析师",
+      "status": "已录取",
+      "salary": "20-32K·14薪",
+      "source": "内推",
+      "appliedDate": "2026-09-20",
+      "notes": "Offer 已签，11 月入职",
+      "createdAt": "2026-10-16T09:00:00.000Z",
+      "updatedAt": "2026-10-21T12:00:00.000Z"
+    },
+    {
+      "id": 8,
+      "company": "小米",
+      "position": "嵌入式软件开发",
+      "status": "待投递",
+      "salary": "21-33K·14薪",
+      "source": "官网",
+      "appliedDate": null,
+      "notes": "想把简历里的车载项目再润色一下",
+      "createdAt": "2026-10-17T09:00:00.000Z",
+      "updatedAt": "2026-10-22T12:00:00.000Z"
+    },
+    {
+      "id": 9,
+      "company": "华为",
+      "position": "C/C++ 开发工程师",
+      "status": "已投递",
+      "salary": "25-40K·14薪",
+      "source": "官网",
+      "appliedDate": "2026-10-22",
+      "notes": "竞争激烈，同步在准备手撕代码",
+      "createdAt": "2026-10-18T09:00:00.000Z",
+      "updatedAt": "2026-10-23T12:00:00.000Z"
+    },
+    {
+      "id": 10,
+      "company": "拼多多",
+      "position": "服务端开发工程师",
+      "status": "已拒绝",
+      "salary": "35-60K·18薪",
+      "source": "BOSS直聘",
+      "appliedDate": "2026-09-15",
+      "notes": "加班强度劝退，没去二面",
+      "createdAt": "2026-10-19T09:00:00.000Z",
+      "updatedAt": "2026-10-24T12:00:00.000Z"
+    }
+  ],
+  "interviews": [
+    {
+      "id": 1,
+      "applicationId": 2,
+      "datetime": "2026-10-27T14:00",
+      "type": "视频面",
+      "round": "二面",
+      "location": "腾讯会议",
+      "notes": "部门 Leader 面，重点问 Go 并发",
+      "createdAt": "2026-10-20T08:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "applicationId": 6,
+      "datetime": "2026-10-29T10:00",
+      "type": "现场面",
+      "round": "二面",
+      "location": "北京·百度科技园 K5",
+      "notes": "带上论文和项目 demo",
+      "createdAt": "2026-10-20T08:00:00.000Z"
+    },
+    {
+      "id": 3,
+      "applicationId": 4,
+      "datetime": "2026-10-15T16:00",
+      "type": "视频面",
+      "round": "二面",
+      "location": "飞书会议",
+      "notes": "聊了订单系统设计，回答一般",
+      "createdAt": "2026-10-20T08:00:00.000Z"
+    },
+    {
+      "id": 4,
+      "applicationId": 7,
+      "datetime": "2026-10-19T10:30",
+      "type": "现场面",
+      "round": "HR面",
+      "location": "北京·亦庄京东总部",
+      "notes": "谈薪顺利，一周内发 Offer",
+      "createdAt": "2026-10-20T08:00:00.000Z"
+    }
+  ]
+}

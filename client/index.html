@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>job-tracker 求职追踪</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <div>
+      <h1>📋 job-tracker 求职追踪</h1>
+      <p class="subtitle">记录每一次投递 · 追踪每一场面试</p>
+    </div>
+    <div id="conn-status" class="conn-status"></div>
+  </div>
+</header>
+
+<main class="layout">
+  <section id="stats" class="stats" aria-label="投递统计"></section>
+
+  <section class="board">
+    <div class="board-left">
+      <div class="toolbar">
+        <div id="filters" class="filters" role="tablist" aria-label="按状态筛选"></div>
+        <button id="btn-add-app" class="btn primary">＋ 新增投递</button>
+      </div>
+      <div id="app-list" class="app-list" aria-label="投递列表"></div>
+    </div>
+
+    <aside class="board-right">
+      <div class="panel-head">
+        <h2>🗓️ 面试安排</h2>
+        <button id="btn-add-interview" class="btn ghost small">＋ 安排面试</button>
+      </div>
+      <div id="interview-list" class="interview-list" aria-label="面试安排"></div>
+    </aside>
+  </section>
+</main>
+
+<!-- 新增 / 编辑投递 -->
+<div id="mask" class="mask hidden">
+  <div class="modal hidden" id="modal-app" role="dialog" aria-modal="true" aria-labelledby="modal-app-title">
+    <h3 id="modal-app-title">新增投递</h3>
+    <form id="form-app">
+      <label>公司名称 *
+        <input name="company" type="text" required placeholder="如：字节跳动" />
+      </label>
+      <label>职位名称 *
+        <input name="position" type="text" required placeholder="如：前端开发工程师" />
+      </label>
+      <div class="form-row">
+        <label>薪资范围
+          <input name="salary" type="text" placeholder="如：25-40K·15薪" />
+        </label>
+        <label>投递渠道
+          <select name="source">
+            <option value="">未选择</option>
+            <option>官网</option>
+            <option>内推</option>
+            <option>BOSS直聘</option>
+            <option>拉勾</option>
+            <option>猎聘</option>
+            <option>其他</option>
+          </select>
+        </label>
+      </div>
+      <label>备注
+        <textarea name="notes" rows="3" placeholder="记录进展、联系人、注意事项…"></textarea>
+      </label>
+      <div class="modal-actions">
+        <button type="button" class="btn ghost" data-close>取消</button>
+        <button type="submit" class="btn primary">保存</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- 新增 / 编辑面试安排 -->
+  <div class="modal hidden" id="modal-interview" role="dialog" aria-modal="true" aria-labelledby="modal-interview-title">
+    <h3 id="modal-interview-title">安排面试</h3>
+    <form id="form-interview">
+      <label>关联投递 *
+        <select name="applicationId" id="iv-app-select" required></select>
+      </label>
+      <div class="form-row">
+        <label>面试时间 *
+          <input name="datetime" type="datetime-local" required />
+        </label>
+        <label>轮次
+          <select name="round">
+            <option>一面</option>
+            <option>二面</option>
+            <option>三面</option>
+            <option>HR面</option>
+            <option>笔试</option>
+            <option>其他</option>
+          </select>
+        </label>
+      </div>
+      <div class="form-row">
+        <label>形式
+          <select name="type">
+            <option>视频面</option>
+            <option>现场面</option>
+            <option>电话面</option>
+            <option>笔试</option>
+            <option>其他</option>
+          </select>
+        </label>
+        <label>地点 / 会议链接
+          <input name="location" type="text" placeholder="如：腾讯会议 / 现场地址" />
+        </label>
+      </div>
+      <label>备注
+        <textarea name="notes" rows="2" placeholder="面试重点、需要准备的内容…"></textarea>
+      </label>
+      <div class="modal-actions">
+        <button type="button" class="btn ghost" data-close>取消</button>
+        <button type="submit" class="btn primary">保存</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div id="toast" class="toast hidden"></div>
+<script src="app.js"></script>
+</body>
+</html>
